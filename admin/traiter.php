@@ -23,97 +23,100 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        box-sizing: border-box;
+    }
 
-body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow-x: hidden;
-}
-.button {
-    cursor: pointer;
-    margin-top: 30px;
-    width: 300px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(184, 255, 112);
-    color: #212121;
-    font-weight: 600;
-    box-shadow: 2px 4px 8px rgba(45, 87, 5, 0.247);
-}
-p{
-    font-size: 30px;
-    font-weight: normal;
-}
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-x: hidden;
+        background-color: #1b1b1b; /* Dark background */
+        color: white; /* White text */
+    }
 
-/* title styles */
-.home-title span{
-    position: relative;
-    overflow: hidden;
-    display: block;
-    line-height: 1.2;
-}
+    h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-.home-title span::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
-    transform: translateX(-101%);
-}
+    form {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8); /* Darker form background */
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Soft glow effect */
+    }
 
-.home-title span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
-    transform: translateX(0);
-}
+    .form-control {
+        background-color: transparent; /* Transparent background for inputs */
+        border: 1px solid #fff; /* White borders */
+        color: #fff; /* White text */
+    }
 
-.home-title span:nth-of-type(1)::before,
-.home-title span:nth-of-type(1)::after{
-    animation-delay: 1s;
-}
+    .form-control::placeholder {
+        color: #ccc; /* Light gray placeholder */
+    }
 
-.home-title span:nth-of-type(2)::before,
-.home-title span:nth-of-type(2)::after{
-    animation-delay: 1.5s;
-}
+    .form-text {
+        color: #ccc; /* Light gray for helper text */
+    }
 
-@keyframes a-ltr-after{
-    0% {transform: translateX(-100%)}
-    100% {transform: translateX(101%)}
-}
+    .btn-primary {
+        background-color: transparent;
+        border: 2px solid #fff; /* White border */
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 2px;
+        transition: 0.5s;
+    }
 
-@keyframes a-ltr-before{
-    0% {transform: translateX(0)}
-    100% {transform: translateX(200%)}
-}
+    .btn-primary:hover {
+        background-color: #fff; /* White background on hover */
+        color: #000; /* Black text on hover */
+        box-shadow: 0 0 10px #fff, 0 0 30px #fff; /* Glow effect */
+    }
+
+    .button {
+        cursor: pointer;
+        margin-top: 30px;
+        width: 300px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        color: #fff; /* White text */
+        font-weight: bold;
+        border: 1px solid #fff; /* White border */
+        box-shadow: 0 0 10px #fff, 0 0 30px #fff; /* Soft glow */
+        transition: 0.5s;
+    }
+
+    .button:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    p {
+        font-size: 30px;
+        font-weight: normal;
+    }
 </style>
 <body>
     <h1>Traiter la commande</h1>
     <form method="post" onsubmit="return validateInput()">
         <input type="text" required name="select" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer l'état">
-        <small id="emailHelp" class="form-text text-muted">en livraison ou livraison terminée</small>
+        <small id="emailHelp" class="form-text">en livraison ou livraison terminée</small>
         <button type="submit" name="btn" class="btn btn-primary mt-2">Sauvegarder</button>
     </form>
     

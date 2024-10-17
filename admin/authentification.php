@@ -32,7 +32,7 @@ body {
   margin:0;
   padding:0;
   font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
+  background: linear-gradient(#1b1b1b, #343434);
 }
 
 .login-box {
@@ -42,9 +42,9 @@ body {
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background:  rgba(0, 0, 0, 0.8);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
   border-radius: 10px;
 }
 
@@ -66,7 +66,7 @@ body {
   color: #fff;
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom:  1px solid #fff;
   outline: none;
   background: transparent;
 }
@@ -85,7 +85,7 @@ body {
 .login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #03e9f4;
+  color: #ccc;
   font-size: 12px;
 }
 
@@ -93,7 +93,7 @@ body {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #03e9f4;
+  color: #fff;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -192,33 +192,24 @@ body {
     bottom: 100%;
   }
 }
-button{
-  margin-top:20px;
+button {
+  margin-top: 20px;
   padding: 25px 30px;
-  background: transparent;
-  color: #03e9f4;
-  font-weight: bolder;
-  font-size:large;
+  background: #444; /* Darker button */
+  color: #fff; /* White text */
+  font-weight: bold;
+  font-size: large;
   border: none;
   border-radius: 5px;
   letter-spacing: 4px;
-  overflow: hidden;
   transition: 0.5s;
   cursor: pointer;
 }
 
-button:hover{
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
-}
-.boutton{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+button:hover {
+  background: #888; /* Lighter gray on hover */
+  color: #fff; /* White text on hover */
+  box-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff; /* White glow */
 }
 
 
